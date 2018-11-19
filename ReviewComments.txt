@@ -1,0 +1,26 @@
+Review about existing code:
+
+1. Every test case is initializing new driver instance. This will add more time to the total execution time of test cases.
+2. There was no modular structure to the porject.
+3. Data is not being passed from once place.
+4. Repeated code in test case eg. setDriverpath()
+5. Inconsistency in the way elements were being declared.
+6. PageFactory method was not declared.
+7. report was not generated.
+8. Using Thread.sleep is not something that should be followed according to the WebAutomation standards
+9. There is no Page Object Model pattern followed
+
+Current Changes made:
+1.  Modular structure
+2.  WebDriverfactory will handle the browser initialization. It binds the instance with current thread and that how the 
+    SINGLE instance of driver is maintained.
+3.  BASE class will contain the base selenium methods.
+4.  Hooks File have the @BeforeSuit, @AfterSuit configurations
+5.  There is a class called PAGEINSTANCES that handles the class instances of webpages.
+    This is LAZY initialization pattern in 7 singleton patters
+6.  Test Cases will only have calling methods from respective Webpages.
+7.  Test-output folder had the report generated
+8.  The screenshot in reports are shown if test case fails.
+9.  To run test either run the testng.xml file or "mvn clean test -P runTestsLocally" command from command prompt
+10. The utility package has separate Clases handling the WEBDRIVER WAIT methods.
+11. The apache Log4j will gemerate a log file ClearTrip.log to store all the steps executed and also the failure occuring

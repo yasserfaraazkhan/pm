@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" verbose="0">
+  <listeners>
+    <listener class-name="utility.ScreenshotListener"/>
+  </listeners>
+  <test name="all-tests(failed)">
+    <classes>
+      <class name="testcases.SignInTest">
+        <methods>
+          <include name="deleteAllCookies"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testcases.SignInTest -->
+      <class name="testcases.FlightBookingTest">
+        <methods>
+          <include name="deleteAllCookies"/>
+        </methods>
+      </class> <!-- testcases.FlightBookingTest -->
+      <class name="testcases.HotelBookingTest">
+        <methods>
+          <include name="deleteAllCookies"/>
+          <include name="shouldBeAbleToSearchForHotels"/>
+        </methods>
+      </class> <!-- testcases.HotelBookingTest -->
+    </classes>
+  </test> <!-- all-tests(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

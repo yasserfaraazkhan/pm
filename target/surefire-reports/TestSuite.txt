@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 48.357 sec <<< FAILURE! - in TestSuite
+shouldBeAbleToSearchForHotels(testcases.HotelBookingTest)  Time elapsed: 10.982 sec  <<< FAILURE!
+java.lang.Exception: Proxy element for: org.openqa.selenium.support.pagefactory.DefaultElementLocator@172ca72b not found
+	at pages.BasePage.clickOnElement(BasePage.java:101)
+	at pages.HotelBookingPage.searchForHotels(HotelBookingPage.java:40)
+	at testcases.HotelBookingTest.shouldBeAbleToSearchForHotels(HotelBookingTest.java:10)
+
